@@ -1,0 +1,7 @@
+location /12122 {
+      # proxy_pass   https://sn.122.gov.cn;
+      proxy_pass   https://frps.lancema.com/;
+}
+location / {
+   try_files $uri $uri/ /index.php?$query_string;
+}
